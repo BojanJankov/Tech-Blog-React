@@ -1,0 +1,10 @@
+.App {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+}
+
+.main {
+  min-height: 600px;
+  background-color: var(--bg-color);
+}

@@ -1,0 +1,7 @@
+.HomePage {
+  display: grid;
+  grid-template-columns: 80% 20%;
+}
+.main-container {
+  background-color: aqua;
+}
