@@ -82,9 +82,7 @@ function RegisterPage() {
           </div>
           <div className="login-message">
             Already have an account?
-            <Link to="/login">
-              <a>Log In</a>
-            </Link>
+            <Link to="/login">Log In</Link>
           </div>
         </div>
       </div>

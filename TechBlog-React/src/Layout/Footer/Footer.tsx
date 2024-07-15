@@ -22,36 +22,34 @@ function Footer() {
 
             <span className="social-links">
               <h2>Follow Us</h2>
-              <a>
+              <div>
                 <img
                   className="facebook"
                   src="../../../src/assets/facebook_145802.png"
                   alt="Facebook"
                 />
-              </a>
-              <a>
+              </div>
+              <div>
                 <img
                   className="instagram"
                   src="../../../src/assets/instagram_2111463.png"
                   alt="Instagram"
                 />
-              </a>
-              <a>
+              </div>
+              <div>
                 <img
                   className="linkedin"
                   src="../../../src/assets/linkedin_145807.png"
                   alt="Linkedin"
                 />
-              </a>
+              </div>
             </span>
           </section>
           <section className="infoone">
             <menu>
               <h2>Support</h2>
               <li>
-                <Link to="/contact">
-                  <a className="footer-contact-link"> Contact</a>
-                </Link>
+                <Link to="/contact">Contact</Link>
               </li>
               <li>
                 <a> Help Center</a>
@@ -68,9 +66,7 @@ function Footer() {
             <menu>
               <h2>Company</h2>
               <li>
-                <Link to="/about">
-                  <a className="footer-about-link"> About Us</a>
-                </Link>
+                <Link to="/about">About Us</Link>
               </li>
               <li>
                 <a> Careers</a>

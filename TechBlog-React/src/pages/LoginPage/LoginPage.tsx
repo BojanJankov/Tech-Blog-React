@@ -59,9 +59,7 @@ function LoginPage() {
           </div>
           <div className="register-message">
             Don't have an account yet?
-            <Link to="/register">
-              <a className="create-account-link">Sign Up</a>
-            </Link>
+            <Link to="/register">Sign Up</Link>
           </div>
         </div>
       </div>
