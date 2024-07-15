@@ -87,13 +87,14 @@
   margin-top: 10px;
   margin-bottom: 5px;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .inputBox input {
   padding: 10px;
   width: 220px;
-  height: 35px;
+  height: 25px;
+  border-radius: 5px;
   font-size: 1.1em;
   outline: none;
   border: 1px solid #333;
@@ -102,6 +103,7 @@
 .inputBox textarea {
   padding: 10px;
   font-size: 1.1em;
+  border-radius: 5px;
   outline: none;
   border: 1px solid #333;
   resize: none;

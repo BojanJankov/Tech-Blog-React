@@ -1,0 +1,28 @@
+.NotFoundPage {
+  min-height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-page-message-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-page-message-div h1 {
+  margin: 0;
+  color: var(--font-color);
+  font-size: 42px;
+}
+
+.error-page-message-div p {
+  color: var(--font-color);
+  font-size: 20px;
+}
+
+.error-page-message-div p:hover {
+  color: var(--border-hover-color);
+}

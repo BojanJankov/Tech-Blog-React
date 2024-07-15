@@ -10,7 +10,6 @@ function LoginPage() {
             <img
               src="../../../src/assets/only logo.png"
               alt="Logo"
-              title="Logo"
               width="138"
             />
           </div>
@@ -20,10 +19,8 @@ function LoginPage() {
               <input
                 id="username"
                 placeholder="Email"
-                className="form-control"
                 name="username"
                 type="text"
-                alt="login"
                 required
               />
               <span className="form-highlight"></span>
@@ -31,12 +28,10 @@ function LoginPage() {
             </div>
             <div id="form-login-password" className="form-group">
               <input
-                id="passwd"
+                id="password"
                 placeholder="Password"
-                className="form-control"
                 name="password"
                 type="password"
-                alt="password"
                 required
               />
               <span className="form-highlight"></span>
