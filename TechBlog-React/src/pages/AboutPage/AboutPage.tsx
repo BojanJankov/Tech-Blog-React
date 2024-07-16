@@ -1,4 +1,5 @@
 import AboutTeamCard from "../../components/AboutTeamCard/AboutTeamCard";
+import BackToTopButton from "../../components/BackToTopButton/BackToTopButton";
 import "./AboutPage.css";
 
 function AboutPage() {
@@ -57,6 +58,7 @@ function AboutPage() {
           />
         </div>
       </section>
+      <BackToTopButton />
     </section>
   );
 }
