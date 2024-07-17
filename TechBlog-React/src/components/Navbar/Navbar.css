@@ -23,3 +23,7 @@
 .Navbar ul li a:hover {
   color: var(--border-hover-color);
 }
+
+.Navbar i {
+  cursor: pointer;
+}

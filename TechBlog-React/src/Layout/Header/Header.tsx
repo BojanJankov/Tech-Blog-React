@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 import "./Header.css";
+import { useContext } from "react";
+import { PostsContext } from "../../Context/PostsContext";
 
 function Header() {
   return (

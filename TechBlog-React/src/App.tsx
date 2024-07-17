@@ -9,10 +9,13 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import PostPage from "./pages/PostPage/PostPage";
+import { useContext } from "react";
+import { PostsContext } from "./Context/PostsContext";
 
 function App() {
+  const { theme } = useContext(PostsContext);
   return (
-    <section className="App">
+    <section className={`App ${theme}`}>
       <Header />
       <main className="main">
         <Routes>
