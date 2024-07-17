@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Post } from "../../models/post.model";
 import "./PostCard.css";
 
@@ -16,7 +17,9 @@ function PostCard({ post }: PostCardProp) {
         <p className="blog-post_text">{post.description}</p>
         <div className="blog-post_button_and_date">
           <div>
-            <button className="blog-post_button">Read More</button>
+            <Link to={`/post/${post.id}`}>
+              <button className="blog-post_button">Read More</button>
+            </Link>
           </div>
           <div className="blog-post_date">
             <div>

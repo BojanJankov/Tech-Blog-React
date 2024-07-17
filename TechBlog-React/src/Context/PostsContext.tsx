@@ -4,17 +4,56 @@ import postsJSON from "../data/posts.json";
 
 interface PostsContextInterface {
   posts: Post[];
+  addLike: (selectedPost: Post) => void;
+  removeLike: (selectedPost: Post) => void;
 }
 
 export const PostsContext = createContext<PostsContextInterface>({
   posts: [],
+  addLike() {},
+  removeLike() {},
 });
 
 function PostsProvider({ children }: { children: ReactNode }) {
-  const [posts, setPosts] = useState<Post[]>(postsJSON);
+  const mappedJSONData = postsJSON.map((post) => {
+    return { ...post, likes: 0 };
+  });
+  const [posts, setPosts] = useState<Post[]>(mappedJSONData);
+
+  const addLike = (selectedPost: Post) => {
+    setPosts((prev) => {
+      return prev.map((post) => {
+        if (post.id === selectedPost.id) {
+          post.likes += 1;
+          return post;
+        } else {
+          return post;
+        }
+      });
+    });
+  };
+
+  const removeLike = (selectedPost: Post) => {
+    setPosts((prev) => {
+      return prev.map((post) => {
+        if (post.id === selectedPost.id) {
+          if (post.likes !== 0) {
+            post.likes -= 1;
+            return post;
+          } else {
+            return post;
+          }
+        } else {
+          return post;
+        }
+      });
+    });
+  };
 
   return (
-    <PostsContext.Provider value={{ posts }}>{children}</PostsContext.Provider>
+    <PostsContext.Provider value={{ posts, addLike, removeLike }}>
+      {children}
+    </PostsContext.Provider>
   );
 }
 

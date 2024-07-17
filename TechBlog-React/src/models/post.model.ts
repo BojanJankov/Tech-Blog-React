@@ -5,6 +5,7 @@ export interface Post {
   date: string;
   image: string;
   description: string;
+  likes: number;
   rating: number;
   text: string;
   tag: string;
