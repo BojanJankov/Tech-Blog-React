@@ -26,6 +26,10 @@
   margin: 0;
 }
 
+.blog-post-tag-span {
+  color: var(--border-hover-color);
+}
+
 .blog-post_img img {
   border-radius: 10px;
   padding: 0;

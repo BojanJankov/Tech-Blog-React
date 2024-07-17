@@ -9,11 +9,12 @@ import { Post } from "../../models/post.model";
 function HomePage() {
   const { posts } = useContext(PostsContext);
   const [filteredPosts, setFilteredPosts] = useState<Post[]>(posts);
+  const [displayedData, setDisplayedData] = useState<Post[]>(filteredPosts);
 
   let postCount = 5;
   useEffect(() => {
-    setFilteredPosts(posts.slice(0, postCount));
-  }, [posts, setFilteredPosts]);
+    setDisplayedData(filteredPosts.slice(0, postCount));
+  }, [setDisplayedData, filteredPosts, postCount]);
 
   const onSearch = (value: string) => {
     setFilteredPosts(
@@ -21,11 +22,12 @@ function HomePage() {
         post.title.toLowerCase().includes(value.toLowerCase())
       )
     );
+    setDisplayedData(filteredPosts);
   };
 
   const handleShowMore = () => {
     postCount += 5;
-    setFilteredPosts(posts.slice(0, postCount));
+    setDisplayedData(filteredPosts.slice(0, postCount));
   };
 
   return (
@@ -73,7 +75,7 @@ function HomePage() {
           </div>
           <div className="main-posts-button-container">
             <div className="main-posts-container">
-              {filteredPosts
+              {displayedData
                 .sort(
                   (a, b) =>
                     new Date(b.date).valueOf() - new Date(a.date).valueOf()
@@ -85,7 +87,7 @@ function HomePage() {
             <div className="load-more-button-div">
               <button
                 className={
-                  posts.length <= filteredPosts.length
+                  filteredPosts.length <= displayedData.length
                     ? "hidden"
                     : "load-more-button"
                 }
