@@ -36,22 +36,19 @@ function AboutPage() {
         <h1>Meet Our Team</h1>
         <div className="team-cards">
           <AboutTeamCard
-            img="https://media.geeksforgeeks.org/wp-content/uploads/20230824122630/
- business-office-business-woman-professional.jpg"
+            img="../../../src/assets/teamImagesMock/member-one.jpg"
             name="Jane"
             role="CEO and Founder"
             email="jane@example.com"
           />
           <AboutTeamCard
-            img="https://media.geeksforgeeks.org/wp-content/uploads/20230822183347/
- man-portrait-businessman-male.jpg"
+            img="../../../src/assets/teamImagesMock/member-two.jpg"
             name="Miller"
             role="Co-Founder"
             email="miller@example.com"
           />
           <AboutTeamCard
-            img="https://media.geeksforgeeks.org/wp-content/uploads/20230824122630/
- business-office-business-woman-professional.jpg"
+            img="../../../src/assets/teamImagesMock/member-one.jpg"
             name="Joe"
             role="Co-Founder"
             email="joe@example.com"

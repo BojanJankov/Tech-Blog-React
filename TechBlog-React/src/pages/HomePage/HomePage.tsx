@@ -3,22 +3,29 @@ import "./HomePage.css";
 import { PostsContext } from "../../Context/PostsContext";
 import PostCard from "../../components/PostCard/PostCard";
 import BackToTopButton from "../../components/BackToTopButton/BackToTopButton";
+import SearchInput from "../../components/SearchInput/SearchInput";
+import { Post } from "../../models/post.model";
 
 function HomePage() {
   const { posts } = useContext(PostsContext);
-
-  const [displayedData, setDisplayedData] = useState(posts);
+  const [filteredPosts, setFilteredPosts] = useState<Post[]>(posts);
 
   let postCount = 5;
-
   useEffect(() => {
-    setDisplayedData(posts.slice(0, postCount));
-  }, []);
+    setFilteredPosts(posts.slice(0, postCount));
+  }, [posts, setFilteredPosts]);
+
+  const onSearch = (value: string) => {
+    setFilteredPosts(
+      posts.filter((post) =>
+        post.title.toLowerCase().includes(value.toLowerCase())
+      )
+    );
+  };
 
   const handleShowMore = () => {
-    console.log("click");
     postCount += 5;
-    setDisplayedData(posts.slice(0, postCount));
+    setFilteredPosts(posts.slice(0, postCount));
   };
 
   return (
@@ -59,13 +66,14 @@ function HomePage() {
               </span>
               <i>Newest posts</i>
             </h2>
-            <div className="main-posts-filters">
+            <SearchInput onSearch={onSearch} />
+            {/* <div className="main-posts-filters">
               <div className="main-selects-div"></div>
-            </div>
+            </div> */}
           </div>
           <div className="main-posts-button-container">
             <div className="main-posts-container">
-              {displayedData
+              {filteredPosts
                 .sort(
                   (a, b) =>
                     new Date(b.date).valueOf() - new Date(a.date).valueOf()
@@ -77,7 +85,7 @@ function HomePage() {
             <div className="load-more-button-div">
               <button
                 className={
-                  posts.length <= displayedData.length
+                  posts.length <= filteredPosts.length
                     ? "hidden"
                     : "load-more-button"
                 }
@@ -92,21 +100,21 @@ function HomePage() {
       <section className="side-container">
         <div className="ad-container-one">
           <img
-            src="../assets/images for ad/ad-one.jpg"
+            src="../../../src/assets/adImages/ad-one.jpg"
             alt="ad image"
             width="260px"
           />
         </div>
         <div className="ad-container-two">
           <img
-            src="../assets/images for ad/ad-two.jpg"
+            src="../../../src/assets/adImages/ad-two.jpg"
             alt="ad image"
             width="260px"
           />
         </div>
         <div className="ad-container-two">
           <img
-            src="../assets/images for ad/ad-three.jpg"
+            src="../../../src/assets/adImages/ad-three.jpg"
             alt="ad image"
             width="260px"
           />

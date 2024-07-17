@@ -30,10 +30,12 @@
 .ad-container-one {
   display: flex;
   justify-content: end;
+  padding-bottom: 10px;
 }
 
 .ad-container-two {
   display: flex;
+  padding-bottom: 10px;
   justify-content: end;
 }
 
@@ -51,8 +53,12 @@
 /* Css za trending posts headrot */
 
 .trending-heading-container {
-  margin-top: 20px;
+  margin-top: 40px;
+  height: 90px;
   width: 800px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
 .trending-heading {
@@ -61,7 +67,6 @@
   width: 235px;
   background-color: var(--bg-grey);
   border-radius: 10px;
-  margin-bottom: 10px;
   color: var(--font-color);
   font-size: 28px;
   padding: 5px 10px;
@@ -69,7 +74,6 @@
 
 .trending-heading i {
   padding-left: 5px;
-  /* font-variant: small-caps; */
 }
 
 /* Main posts container css */
