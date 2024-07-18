@@ -1,0 +1,115 @@
+.AddPostPage {
+  padding: 50px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.add-post-form-div {
+  width: 500px;
+  min-height: 700px;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: var(--bg-grey);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.add-post-form-heading h2 {
+  margin: 0;
+  padding: 10px;
+  font-size: 26px;
+  color: var(--font-color);
+}
+
+.add-post-form-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 10px;
+}
+
+.add-post-form-info input {
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid var(--bg-grey);
+  padding: 2px;
+}
+.add-post-form-info textarea {
+  height: 100px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.add-post-form-button {
+  display: flex;
+  justify-content: center;
+}
+
+.add-post-form-button button {
+  width: 150px;
+  height: 30px;
+  border: 1px solid var(--bg-grey);
+  border-radius: 10px;
+  background-color: var(--border-hover-color);
+  color: var(--font-color);
+  padding: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.preview-post {
+  width: 1000px;
+  height: 700px;
+  border-radius: 5px;
+  background-color: var(--bg-grey);
+  pointer-events: none;
+}
+
+.post-preview-title {
+  color: var(--font-color);
+  padding: 5px 20px 0 20px;
+  width: 1000px;
+}
+
+.post-preview-image-div {
+  width: 1000px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.post-preview-image-div img {
+  width: 200px;
+  height: 200px;
+}
+
+.post-preview-text {
+  width: 1000px;
+  height: 180px;
+  color: var(--font-color);
+  padding: 0 20px;
+}
+
+.preview-span-tag {
+  color: var(--border-hover-color);
+}
+
+.preview-post-page-button-container {
+  width: 980px;
+  height: 70px;
+  display: flex;
+  justify-content: end;
+  padding: 10px 20px;
+  gap: 15px;
+}
+
+.preview-post-page-button-container button {
+  height: 30px;
+  width: 60px;
+  border-radius: 10px;
+  border: 1px solid var(--border-hover-color);
+  background: var(--bg-grey);
+  color: var(--border-hover-color);
+  cursor: pointer;
+}

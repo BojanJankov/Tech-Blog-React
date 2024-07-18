@@ -11,6 +11,7 @@ import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import PostPage from "./pages/PostPage/PostPage";
 import { useContext } from "react";
 import { PostsContext } from "./Context/PostsContext";
+import AddPostPage from "./pages/AddPostPage/AddPostPage";
 
 function App() {
   const { theme } = useContext(PostsContext);
@@ -21,6 +22,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/post/:id" element={<PostPage />} />
+          <Route path="/add-post" element={<AddPostPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/login" element={<LoginPage />} />

@@ -1,0 +1,146 @@
+.comment-post-page-div-container {
+  padding: 50px 200px;
+}
+
+.container_comment {
+  background: var(--bg-grey);
+  border-radius: 10px;
+  padding: 40px;
+  font-family: monospace;
+  color: var(--font-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.head {
+  display: flex;
+  justify-content: center;
+}
+
+.text {
+  margin: 10px 0;
+  font-family: sans-serif;
+}
+
+.text p {
+  font-size: 14px;
+}
+
+.commentbox {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.commentbox img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 20px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.content {
+  width: 100%;
+}
+
+.user {
+  margin: 5px 0;
+  background: var(--bg-color);
+  padding: 10px;
+  color: var(--font-color);
+  border-radius: 5px;
+}
+
+.usercomment {
+  color: var(--font-color);
+}
+
+.commentinput input {
+  padding: 10px;
+  border-bottom: 2px solid var(--border-hover-color);
+  background: var(--bg-color);
+  margin-bottom: 10px;
+  width: 95%;
+  border-radius: 5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 65px;
+}
+
+.buttons button {
+  padding: 5px 10px;
+  background: var(--bg-color);
+  color: var(--border-hover-color);
+  border-radius: 5px;
+  border: 1px solid var(--border-hover-color);
+  cursor: pointer;
+}
+
+.buttons button.abled {
+  background: var(--border-hover-color);
+  color: #fff;
+}
+
+.policy {
+  display: flex;
+  justify-content: center;
+  margin: 50px 30px 20px 0;
+  padding-right: 50px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  color: var(--font-color);
+}
+
+.policy a {
+  text-decoration: none;
+  color: var(--border-hover-color);
+}
+
+.parents {
+  font-family: Arial, sans-serif;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.parents h1 {
+  font-size: 2em;
+}
+
+.parents p {
+  margin: 10px 0;
+  font-size: 0.9em;
+}
+
+.parents img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 20px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.engagements {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.engagements img {
+  width: 20px;
+}
+
+.engagements img:nth-child(1) {
+  margin-right: 10px;
+  width: 25px;
+}
+
+.date {
+  color: #808080;
+  font-size: 0.8em;
+}

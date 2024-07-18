@@ -23,25 +23,31 @@ function Footer() {
             <span className="social-links">
               <h2>Follow Us</h2>
               <div>
-                <img
-                  className="facebook"
-                  src="../../../src/assets/facebook_145802.png"
-                  alt="Facebook"
-                />
+                <a href="https://www.facebook.com/" target="_blank">
+                  <img
+                    className="facebook"
+                    src="../../../src/assets/facebook_145802.png"
+                    alt="Facebook"
+                  />
+                </a>
               </div>
               <div>
-                <img
-                  className="instagram"
-                  src="../../../src/assets/instagram_2111463.png"
-                  alt="Instagram"
-                />
+                <a href="https://www.instagram.com/" target="_blank">
+                  <img
+                    className="instagram"
+                    src="../../../src/assets/instagram_2111463.png"
+                    alt="Instagram"
+                  />
+                </a>
               </div>
               <div>
-                <img
-                  className="linkedin"
-                  src="../../../src/assets/linkedin_145807.png"
-                  alt="Linkedin"
-                />
+                <a href="https://www.linkedin.com/" target="_blank">
+                  <img
+                    className="linkedin"
+                    src="../../../src/assets/linkedin_145807.png"
+                    alt="Linkedin"
+                  />
+                </a>
               </div>
             </span>
           </section>

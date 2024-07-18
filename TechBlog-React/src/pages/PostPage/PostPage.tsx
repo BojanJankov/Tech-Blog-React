@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from "react";
 import { PostsContext } from "../../Context/PostsContext";
 import { Post } from "../../models/post.model";
 import BackToTopButton from "../../components/BackToTopButton/BackToTopButton";
+import CommentPanel from "../../components/CommentPanel/CommentPanel";
 
 function PostPage() {
   const { posts, addLike, removeLike } = useContext(PostsContext);
@@ -50,6 +51,7 @@ function PostPage() {
               </div>
               <div className="post-page-text-div-container">
                 <p>{selectedPost.text}</p>
+                <p>Author: {selectedPost.author}</p>
                 <p>#{selectedPost.tag}</p>
               </div>
               <div className="post-page-button-container">
@@ -72,7 +74,7 @@ function PostPage() {
                 </button>
               </div>
             </div>
-            <div className="comment-post-page-div-container">
+            {/* <div className="comment-post-page-div-container">
               <div className="container_comment">
                 <div className="head">
                   <h1>COMMENT</h1>
@@ -110,7 +112,8 @@ function PostPage() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
+            <CommentPanel />
           </div>
           <BackToTopButton />
         </>
