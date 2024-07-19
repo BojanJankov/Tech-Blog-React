@@ -89,12 +89,13 @@ function PostsFilters() {
         <option value="none" disabled>
           Sort by:
         </option>
-        <option value="rating">Rating</option>
         <option value="month">Month</option>
         <option value="date">Date</option>
         <option value="tag">Tag</option>
       </select>
-      {mainSelectValue !== "none" ? renderSelects(mainSelectValue) : null}
+      <div className="second-select-filter-div">
+        {mainSelectValue !== "none" ? renderSelects(mainSelectValue) : null}
+      </div>
       <div className="main-button-filters-div">
         <button
           className="posts-filter-button"

@@ -80,11 +80,11 @@
 
 .main-posts-filters {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 5px;
   background-color: var(--bg-grey);
-  width: 250px;
+  width: 280px;
   border-radius: 10px;
   padding: 0px 10px;
   height: 42px;
