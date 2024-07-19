@@ -12,7 +12,7 @@
   background-color: var(--bg-grey);
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
 }
 
 .add-post-form-heading h2 {

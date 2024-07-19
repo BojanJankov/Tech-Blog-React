@@ -5,16 +5,22 @@ import PostCard from "../../components/PostCard/PostCard";
 import BackToTopButton from "../../components/BackToTopButton/BackToTopButton";
 import SearchInput from "../../components/SearchInput/SearchInput";
 import { Post } from "../../models/post.model";
+import PostsFilters from "../../components/PostsFilters/PostsFilters";
 
 function HomePage() {
-  const { posts } = useContext(PostsContext);
-  const [filteredPosts, setFilteredPosts] = useState<Post[]>(posts);
+  const { posts, filteredPostsContext } = useContext(PostsContext);
+  const [filteredPosts, setFilteredPosts] =
+    useState<Post[]>(filteredPostsContext);
   const [displayedData, setDisplayedData] = useState<Post[]>(filteredPosts);
 
   let postCount = 5;
   useEffect(() => {
     setDisplayedData(filteredPosts.slice(0, postCount));
   }, [setDisplayedData, filteredPosts, postCount]);
+
+  useEffect(() => {
+    setFilteredPosts(filteredPostsContext);
+  }, [setFilteredPosts, filteredPostsContext]);
 
   const onSearch = (value: string) => {
     setFilteredPosts(
@@ -69,9 +75,9 @@ function HomePage() {
               <i>Newest posts</i>
             </h2>
             <SearchInput onSearch={onSearch} />
-            {/* <div className="main-posts-filters">
-              <div className="main-selects-div"></div>
-            </div> */}
+            <div className="main-posts-filters">
+              <PostsFilters />
+            </div>
           </div>
           <div className="main-posts-button-container">
             <div className="main-posts-container">

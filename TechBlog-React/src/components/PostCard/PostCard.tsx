@@ -26,7 +26,7 @@ function PostCard({ post }: PostCardProp) {
           </div>
           <div className="blog-post_date">
             <div>
-              <small>{post.author}</small>
+              <small>{post.author}/</small>
               <small>{post.date}</small>
             </div>
             <small className="post-rating">{post.rating}⭐</small>
