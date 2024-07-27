@@ -81,14 +81,18 @@ function HomePage() {
           </div>
           <div className="main-posts-button-container">
             <div className="main-posts-container">
-              {displayedData
-                .sort(
-                  (a, b) =>
-                    new Date(b.date).valueOf() - new Date(a.date).valueOf()
-                )
-                .map((post, i) => (
-                  <PostCard key={i} post={post} />
-                ))}
+              {displayedData.length > 0 ? (
+                displayedData
+                  .sort(
+                    (a, b) =>
+                      new Date(b.date).valueOf() - new Date(a.date).valueOf()
+                  )
+                  .map((post, i) => <PostCard key={i} post={post} />)
+              ) : (
+                <div className="no-posts-found-message">
+                  <p>Posts not found!</p>
+                </div>
+              )}
             </div>
             <div className="load-more-button-div">
               <button

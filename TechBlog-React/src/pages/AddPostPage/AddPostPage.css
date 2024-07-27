@@ -113,3 +113,9 @@
   color: var(--border-hover-color);
   cursor: pointer;
 }
+
+.add-image-div-container-flex {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

@@ -57,13 +57,7 @@ function AddPostPage() {
               required: { value: true, message: "Author is required" },
             })}
           />
-          <input
-            type="text"
-            placeholder="Image URL"
-            {...register("image", {
-              required: { value: true, message: "Image URL is required" },
-            })}
-          />
+          <input type="text" placeholder="Image URL" {...register("image")} />
           <textarea
             placeholder="Description (50 - 250)"
             maxLength={250}
